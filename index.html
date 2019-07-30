@@ -1,13 +1,188 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-e"/>
+    <meta charset="utf-8"/>
     <title>tic tac toe</title>
     <style>
-        
+        #my, #rival{
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 50px;
+        }
+        #rival{
+          vertical-align: bottom;
+        }
+        #my-deck, #rival-deck{
+          display: inline-block;
+          vertical-align: top;
+          width: 200px;
+        }
+
+        #rival-deck, #rival-hero, #rival-cards, #my-cards, #my-deck,
+        #my-hero{
+          text-align: center;
+        }
+        .card{
+          width: 50px;
+          height: 75px;
+          display: inline-block;
+          position: relative;
+          border: 1px solid black;
+          margin-bottom: 10px;
+        }
+        .card-name{
+          text-align: center;
+          font-size: 12px;
+        }
+        .card-att, .card-hp, .card-cost{
+          font-size: 12px;
+          font-weight: bold;
+          text-align: center;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          border: 1px solid black;
+        }
+        .card-cost{
+          bottom: auto;
+          top: 0;
+          right: 0;
+          background-color: blue;
+          color: white;
+        }
+
+        .card-att{
+          left: 0;
+          background-color: yellow;
+        }
+        .card-hp{
+          right: 0;
+          background-color: red;
+          color: white;
+        }
     </style>
 </head>
     <body>
+      <div id="rival">
+      <div id="rival-cost">Cost : <span>10</span></div>
+      <div id="rival-hero">
+          <div class="card">
+            <div class="card-name">rival hero</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>             
+      </div>
+      <div id="rival-cards" style="height: 150px">
+         <!--
+            <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+            <div class="card">
+                <div class="card-cost">2</div>
+                <div class="card-att">5</div>
+                <div class="card-hp">10</div>
+              </div>
+              <div class="card">
+                  <div class="card-cost">2</div>
+                  <div class="card-att">5</div>
+                  <div class="card-hp">10</div>
+                </div>   
+         --> 
+      </div>
+    </div>
+<div id="rival-deck">
+  <div>Deck</div>
+    <div class="card">
+        <div class="card-cost">2</div>
+        <div class="card-att">5</div>
+        <div class="card-hp">10</div>
+      </div>
+    <div class="card">
+        <div class="card-cost">2</div>
+        <div class="card-att">5</div>
+        <div class="card-hp">10</div>
+      </div>
+      <div class="card">
+          <div class="card-cost">2</div>
+        <div class="card-att">5</div>
+        <div class="card-hp">10</div>
+      </div>
+    <div class="card">
+        <div class="card-cost">2</div>
+        <div class="card-att">5</div>
+        <div class="card-hp">10</div>
+      </div>
+       <div class="card">
+          <div class="card-cost">2</div>
+        <div class="card-att">5</div>
+        <div class="card-hp">10</div>
+      </div>    
+</div>
+
+
+      <hr>
+      <div id="my">
+      <div id="my-cards" style="height: 150px"> <!-- my heroes-->
+        <!--
+          <div class="card">
+            <div class="card-cost">2</div>
+          <div class="card-att">5</div>
+          <div class="card-hp">10</div>
+        </div>
+        <div class="card">
+            <div class="card-cost">2</div>
+            <div class="card-att">5</div>
+            <div class="card-hp">10</div>
+          </div>
+          <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+          -->  
+        </div>
+      <div id="my-hero">
+          <div class="card">
+            <div class="card-name">my Hero</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+      </div>
+    <div id="my-cost">Cost : <span>10</span></div>
+    </div>
+      <div id="my-deck">
+        <div>Deck</div>
+          <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+          <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+            <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+          <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>
+             <div class="card">
+              <div class="card-cost">2</div>
+              <div class="card-att">5</div>
+              <div class="card-hp">10</div>
+            </div>  
+      </div>
     
       <script src="game.js"></script>  
     </body>
